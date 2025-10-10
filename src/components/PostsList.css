@@ -8,10 +8,11 @@
 }
 
 .posts-grid{
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 16px;
 }
+
 
 .post-card{
   background: #fff;
@@ -20,9 +21,11 @@
   transition: transform 02.s ease;
 }
 
-.post-card :hover{
+.post-card:hover {
   transform: translateY(-4px);
 }
+
+
 
 .post-card h3{
   font-size: 18px;

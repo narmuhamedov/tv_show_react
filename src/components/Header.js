@@ -9,6 +9,8 @@ function Header(){
                 <Link to="/about" style={{margin:'10px', color: 'white'}}>О нас</Link>
                 <Link to="/contacts" style={{margin:'10px', color: 'white'}}>Контакты</Link>
                 <Link to="/movies" style={{margin:'10px', color: 'white'}}>Фильмы</Link>
+                <Link to="/favorites" style={{margin:'10px', color: 'white'}}>Избранные</Link>
+
             </nav>
         </header>
     )
