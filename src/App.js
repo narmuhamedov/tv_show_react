@@ -8,6 +8,8 @@ import MoviePage from "./pages/MoviesPage";
 import Detail from "./pages/Detail";
 import FavoritesPage from "./pages/FavoritePage";
 import RegistrationPage from "./pages/RegistrationPage";
+import Login from "./pages/Login";
+import Users from "./pages/Users";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/register" element={<RegistrationPage />} />
         <Route path="/movies" element={<MoviePage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/users" element={<Users />} />
       </Routes>
       <Footer />
     </Router>
