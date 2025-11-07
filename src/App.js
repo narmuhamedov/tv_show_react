@@ -11,6 +11,7 @@ import RegistrationPage from "./pages/RegistrationPage";
 import Login from "./pages/Login";
 import Users from "./pages/Users";
 import TicketPage from "./components/TicketPage";
+import RestauranPage from "./pages/RestauranPage";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/users" element={<Users />} />
         <Route path="/tickets" element={<TicketPage />} />
+         <Route path="/menu" element={<RestauranPage />} />
       </Routes>
       <Footer />
     </Router>

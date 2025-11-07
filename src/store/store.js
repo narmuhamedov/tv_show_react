@@ -6,13 +6,15 @@ import authReducer from "./slices/authSlice";
 import registrationMiddleware from "./middleware/registration/registrationMiddleware";
 import authMiddleware from "./middleware/authMiddleware";
 import ticketReducer from "./slices/ticketsSlice";
+import menuReducer from './slices/menuSlice'
 
 const rootReducer = combineReducers({
   post: postsReducer,
   favorite: favoritesReducer,
   user: userReducer,
   auth: authReducer,
-  tickets: ticketReducer, // ✅ Добавили сюда!
+  tickets: ticketReducer,
+  menu: menuReducer, // ✅ Теперь menuReducer добавлен правильно!
 });
 
 export const store = configureStore({
@@ -22,4 +24,5 @@ export const store = configureStore({
       registrationMiddleware,
       authMiddleware,
     ]),
+  // Убрали menu: menuReducer отсюда - это было неправильно
 });

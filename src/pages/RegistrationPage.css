@@ -1,0 +1,32 @@
+.menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-card{
+    background-color: yellow;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+}
+
+.menu-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.menu-card button{
+    background-color: bisque;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
