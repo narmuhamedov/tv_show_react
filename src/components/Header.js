@@ -12,6 +12,7 @@ function Header() {
                 <Link to="/favorites" style={{ margin: '10px', color: 'white' }}>Избранные</Link>
                 <Link to="/register" style={{ margin: '10px', color: 'white' }}>Регистрация</Link>
                  <Link to="/menu" style={{ margin: '10px', color: 'white' }}>Закусочная</Link>
+                 <Link to="/booking" style={{ margin: '10px', color: 'white' }}>Бронирование столиков</Link>
             </nav>
         </header>
     );

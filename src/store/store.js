@@ -7,6 +7,8 @@ import registrationMiddleware from "./middleware/registration/registrationMiddle
 import authMiddleware from "./middleware/authMiddleware";
 import ticketReducer from "./slices/ticketsSlice";
 import menuReducer from './slices/menuSlice'
+import bookingReducer from "./slices/bookingSlice"
+
 
 const rootReducer = combineReducers({
   post: postsReducer,
@@ -15,6 +17,7 @@ const rootReducer = combineReducers({
   auth: authReducer,
   tickets: ticketReducer,
   menu: menuReducer, // ✅ Теперь menuReducer добавлен правильно!
+  booking: bookingReducer
 });
 
 export const store = configureStore({
