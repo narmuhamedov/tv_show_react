@@ -8,7 +8,8 @@ import authMiddleware from "./middleware/authMiddleware";
 import ticketReducer from "./slices/ticketsSlice";
 import menuReducer from './slices/menuSlice'
 import bookingReducer from "./slices/bookingSlice"
-
+import themeReducer from "./slices/themeSlice"
+import languageReducer from './slices/languageSlice'; // Исправлено имя импорта
 
 const rootReducer = combineReducers({
   post: postsReducer,
@@ -17,15 +18,17 @@ const rootReducer = combineReducers({
   auth: authReducer,
   tickets: ticketReducer,
   menu: menuReducer, // ✅ Теперь menuReducer добавлен правильно!
-  booking: bookingReducer
+  booking: bookingReducer,
+  theme: themeReducer,
+  language: languageReducer, // Добавлено в корневой редюсер
+  
 });
 
 export const store = configureStore({
-  reducer: rootReducer,
+  reducer: rootReducer, // добавляем редюсер
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat([
       registrationMiddleware,
       authMiddleware,
     ]),
-  // Убрали menu: menuReducer отсюда - это было неправильно
 });

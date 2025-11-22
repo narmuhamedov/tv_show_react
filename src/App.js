@@ -13,8 +13,11 @@ import Users from "./pages/Users";
 import TicketPage from "./components/TicketPage";
 import RestauranPage from "./pages/RestauranPage";
 import BookingPage from "./pages/BookingPage";
+import { useSelector } from "react-redux";
+
 
 function App() {
+  const theme = useSelector((state)=>state.theme.mode)
   return (
     <Router>
       <Header />
@@ -23,7 +26,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div>
+            <div className={theme== "dark" ? "dark-mode": "light-mode"}>
               <HomePage />
               <PostsList />
             </div>

@@ -1,7 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { toogleTheme } from "../store/slices/themeSlice";
+import { translations } from "../i18n";
+import { switchLanguage } from "../store/slices/languageSlice";
 
 function Header() {
+    
+    const dispatch = useDispatch();
+    const theme = useSelector((state)=> state.theme.mode)
+    const lang = useSelector((state) => state.language.lang); // Исправлен путь
+
+
+    const t = translations[lang]
+
     return (
         <header style={{ padding: '15px', background: '#333', color: '#fff' }}>
             <nav>
@@ -13,6 +25,25 @@ function Header() {
                 <Link to="/register" style={{ margin: '10px', color: 'white' }}>Регистрация</Link>
                  <Link to="/menu" style={{ margin: '10px', color: 'white' }}>Закусочная</Link>
                  <Link to="/booking" style={{ margin: '10px', color: 'white' }}>Бронирование столиков</Link>
+                <button onClick={()=> dispatch(toogleTheme())}
+                    style={{
+                        marginLeft: "30px",
+                        padding: "5px 10px",
+                        cursor: "pointer"
+                    }}
+                    >
+                        {theme === "light" ? "🌙Темная": "☀️Светлая"}
+                </button>
+
+                <button onClick={()=> dispatch(switchLanguage())}
+                    style={{ marginLeft: '20px', padding: "5px 10px" }}
+                    >
+                        {t.change_lang}
+
+                </button>
+
+
+
             </nav>
         </header>
     );
