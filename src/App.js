@@ -14,6 +14,7 @@ import TicketPage from "./components/TicketPage";
 import RestauranPage from "./pages/RestauranPage";
 import BookingPage from "./pages/BookingPage";
 import { useSelector } from "react-redux";
+import ProductsPage from "./pages/ProductsPage";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Route path="/tickets" element={<TicketPage />} />
          <Route path="/menu" element={<RestauranPage />} />
          <Route path="/booking" element={<BookingPage />} />
+         <Route path="/products" element={<ProductsPage />} />
       </Routes>
       <Footer />
     </Router>

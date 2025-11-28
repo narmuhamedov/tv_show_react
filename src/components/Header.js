@@ -25,6 +25,7 @@ function Header() {
                 <Link to="/register" style={{ margin: '10px', color: 'white' }}>Регистрация</Link>
                  <Link to="/menu" style={{ margin: '10px', color: 'white' }}>Закусочная</Link>
                  <Link to="/booking" style={{ margin: '10px', color: 'white' }}>Бронирование столиков</Link>
+                  <Link to="/products" style={{ margin: '10px', color: 'white' }}>Продукты</Link>
                 <button onClick={()=> dispatch(toogleTheme())}
                     style={{
                         marginLeft: "30px",

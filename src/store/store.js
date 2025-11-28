@@ -10,6 +10,8 @@ import menuReducer from './slices/menuSlice'
 import bookingReducer from "./slices/bookingSlice"
 import themeReducer from "./slices/themeSlice"
 import languageReducer from './slices/languageSlice'; // Исправлено имя импорта
+import productReducer from './slices/productSlice';
+
 
 const rootReducer = combineReducers({
   post: postsReducer,
@@ -21,6 +23,7 @@ const rootReducer = combineReducers({
   booking: bookingReducer,
   theme: themeReducer,
   language: languageReducer, // Добавлено в корневой редюсер
+  products: productReducer,
   
 });
 
